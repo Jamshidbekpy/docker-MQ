@@ -19,3 +19,6 @@ class UserService(AbstractUserService):
         if not verify_password(user_in.password, user.hashed_password):
             raise Exception("Invalid password")
         return UserOut(username=user.username)
+    
+    
+

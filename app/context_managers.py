@@ -1,6 +1,7 @@
 from contextlib import contextmanager
 from .database import SessionLocal
 
+
 @contextmanager
 def get_db():
     db = SessionLocal()
@@ -8,3 +9,5 @@ def get_db():
         yield db
     finally:
         db.close()
+        
+        
